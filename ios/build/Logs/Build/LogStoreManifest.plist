@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>9</integer>
+	<key>logs</key>
+	<dict>
+		<key>EB45802E-78B0-49FB-BBA5-D3A6A1768092</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EB45802E-78B0-49FB-BBA5-D3A6A1768092.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Otto project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Otto</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace Otto with scheme Otto and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>569844639.63803399</real>
+			<key>timeStoppedRecording</key>
+			<real>569844644.88103199</real>
+			<key>title</key>
+			<string>Building workspace Otto with scheme Otto and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>EB45802E-78B0-49FB-BBA5-D3A6A1768092</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

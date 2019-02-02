@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>EB45802E-78B0-49FB-BBA5-D3A6A1768092</key>
+		<key>6E4A6B73-F870-4D01-A8C9-FBDECB365844</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,9 +15,9 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>EB45802E-78B0-49FB-BBA5-D3A6A1768092.xcactivitylog</string>
+			<string>6E4A6B73-F870-4D01-A8C9-FBDECB365844.xcactivitylog</string>
 			<key>highLevelStatus</key>
-			<string>W</string>
+			<string>E</string>
 			<key>schemeIdentifier-containerName</key>
 			<string>Otto project</string>
 			<key>schemeIdentifier-schemeName</key>
@@ -27,13 +27,13 @@
 			<key>signature</key>
 			<string>Building workspace Otto with scheme Otto and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>569844639.63803399</real>
+			<real>570839941.40436995</real>
 			<key>timeStoppedRecording</key>
-			<real>569844644.88103199</real>
+			<real>570839943.46437502</real>
 			<key>title</key>
 			<string>Building workspace Otto with scheme Otto and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>EB45802E-78B0-49FB-BBA5-D3A6A1768092</string>
+			<string>6E4A6B73-F870-4D01-A8C9-FBDECB365844</string>
 		</dict>
 	</dict>
 </dict>

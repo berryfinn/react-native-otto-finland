@@ -6,8 +6,6 @@ In file App.js:
   state = {
     latitude: null,
     longitude: null,
-    error: null,
-    data: [],
-    spinner: false
+    error: null
 };
 ```

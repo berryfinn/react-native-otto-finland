@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import {
   View, StyleSheet, ScrollView, Text,
-  TouchableHighlight
+  TouchableOpacity
 } from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import Spinner from 'react-native-loading-spinner-overlay';
 
-import { colorOtto, colorTalletus } from './src/constants';
+import { colorOtto, colorTalletus, titleHomePage } from './src/constants';
 import { Header, ListItem } from './src/components/uikit';
 import { DetailsScreen } from './src/pages';
 
 const url = 'https://go-shopping.fi/otto/atms.php';
-// lat=61.0526909&lon=28.1010841
+// lat=61.0526909&lon=28.1010841  
 
 class HomeScreen extends Component {
 
@@ -24,7 +24,7 @@ class HomeScreen extends Component {
   };
 
   static navigationOptions = {
-    title: 'OTTO',
+    title: titleHomePage,
     headerStyle: {
       backgroundColor: colorOtto,
     },
@@ -88,15 +88,15 @@ class HomeScreen extends Component {
             textStyle={styles.spinnerTextStyle}
           />
           <View style={styles.page} >
-            <Header text={'Missä lähin otto on?'} />
+            {/* <Header text={'Missä lähin otto on?'} /> */}
             <ScrollView>
               <View style={styles.listStyle}>
                 {this.state.data.map(item => (
-                  <TouchableHighlight key={item.number}
+                  <TouchableOpacity style={styles.touch} key={item.number} 
                     onPress={() => this.props.navigation.push('Details',
                       { item: item, title: item.address.toUpperCase() })}>
                     <ListItem data={item} />
-                  </TouchableHighlight>
+                  </TouchableOpacity>
                 ))
                 }
               </View>
@@ -121,12 +121,18 @@ class HomeScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+
+  touch: {
+    //backgroundColor:'white',
+    //opacity: 0.2
+    //underlayColor: 'red'
+  },
   spinnerTextStyle: {
     color: '#FFF'
   },
   page: {
     flex: 2,
-    backgroundColor: colorTalletus,
+    backgroundColor: 'white',
   },
   listStyle: {
     backgroundColor: 'white',

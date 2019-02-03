@@ -28,7 +28,7 @@ Good place to get location in componentDidMount() function (App.js)
     );
 }
 ```
-And view coordinats: 
+And view coordinats: (in App.js)
 ```js
   render() {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import MapView from 'react-native-maps';
 import { Marker } from 'react-native-maps';
 
@@ -11,7 +11,7 @@ class DetailsScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return {
             title: navigation.getParam('title', 'otto'),
-            
+
             headerStyle: {
                 backgroundColor: colorOtto,
                 headerTintColor: colorTalletus,
@@ -49,17 +49,25 @@ class DetailsScreen extends React.Component {
                         description={item.city}
                     />
                 </MapView>
-                <View style={styles.description}>
-                    <Text style={styles.text}>
-                        {item.address}, {item.city}
-                    </Text>
-                    <Text style={styles.text}>
-                        {item.place}
-                    </Text>
-                    <Text style={styles.text}>
-                        {sType(item.type)}
-                    </Text>
-                </View>
+                <TouchableOpacity style={styles.description}>
+                    <View style={styles.descriptionRow}>
+                        <View style={styles.column1}>
+                            <Text style={styles.text}>
+                                {item.address}, {item.city}
+                            </Text>
+                            <Text style={styles.text}>
+                                {item.place}
+                            </Text>
+                            <Text style={styles.text}>
+                                {sType(item.type)}
+                            </Text>
+                        </View>
+                        <View style={styles.column2}>
+                            <Text style={styles.button}>Ottaa</Text>
+                            <Text style={styles.button}>Reitti</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -68,25 +76,46 @@ class DetailsScreen extends React.Component {
 const styles = StyleSheet.create({
     page: {
         flex: 1,
+        flexDirection: 'column',
         //justifyContent: 'center',
         backgroundColor: 'lightsteelblue',
         //padding: 5,
         //   opacity: 0.8
     },
     map: {
-        flex: 5,
+        flex: 6,
         width: '100%',
         //height: '90%' 
     },
     description: {
         flex: 1,
-        alignItems: 'center',
+        //alignItems: 'center',
         backgroundColor: colorTalletus,
-        padding: 5
+        padding: 5,
+        //paddingBottom: 16
+    },
+    descriptionRow: {
+        flex: 1,
+        flexDirection: 'row'
+    },
+    column1: {
+        flex: 2,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    column2: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     text: {
         color: 'whitesmoke',
-        fontSize: 16,
+        fontSize: 12,
+        textTransform: 'capitalize'
+    },
+    button: {
+        color: 'whitesmoke',
+        fontSize: 24,
         textTransform: 'capitalize'
     }
 })

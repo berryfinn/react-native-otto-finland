@@ -53,9 +53,9 @@ class HomeScreen extends Component {
     }
   }
 
-  onPress = () => {
-    alert('pressed');
-  }
+  // onPress = () => {
+  //   alert('pressed');
+  // }
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
@@ -108,7 +108,7 @@ class HomeScreen extends Component {
       return (
         <View style={{ flex: 1 }}>
           <View style={styles.errPage} >
-            <Header text={'Missä lähin otto on?'} />
+            {/* <Header text={'Missä lähin otto on?'} /> */}
             <View style={styles.errBox}>
               <Text style={styles.ErrTitle}>In order to see list of nearest ATMs you need enable location.</Text>
               <Text style={styles.ErrText}>Go to Settings App > OTTO > Locations and enable locations services from there.</Text>
@@ -141,12 +141,13 @@ const styles = StyleSheet.create({
   },
   errPage: {
     flex: 2,
+    padding: 20,
     backgroundColor: colorTalletus,
     alignContent: 'center',
     alignItems: 'center'
   },
   errBox: {
-    width: '90%',
+    width: '100%',
     alignContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',

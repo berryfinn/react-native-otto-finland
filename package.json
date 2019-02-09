@@ -12,6 +12,7 @@
     "react-native-gesture-handler": "^1.0.12",
     "react-native-loading-spinner-overlay": "^1.0.1",
     "react-native-maps": "^0.22.1",
+    "react-native-navigation-directions": "^1.0.3",
     "react-navigation": "^3.0.9"
   },
   "devDependencies": {

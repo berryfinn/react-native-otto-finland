@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>29E4BE87-0AAD-4E01-9A15-BC63CA0F6F67</key>
+		<key>096014BE-EF79-463B-B390-63AF22A94AFB</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>29E4BE87-0AAD-4E01-9A15-BC63CA0F6F67.xcactivitylog</string>
+			<string>096014BE-EF79-463B-B390-63AF22A94AFB.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>E</string>
 			<key>schemeIdentifier-containerName</key>
@@ -27,15 +27,15 @@
 			<key>signature</key>
 			<string>Building workspace Otto with scheme Otto and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>570915469.35047102</real>
+			<real>571409810.51150703</real>
 			<key>timeStoppedRecording</key>
-			<real>570915471.86966503</real>
+			<real>571409812.18536103</real>
 			<key>title</key>
 			<string>Building workspace Otto with scheme Otto and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>29E4BE87-0AAD-4E01-9A15-BC63CA0F6F67</string>
+			<string>096014BE-EF79-463B-B390-63AF22A94AFB</string>
 		</dict>
-		<key>8A9FA6C9-297B-40B3-AD40-8A0B697C912F</key>
+		<key>5C0906FE-5ACB-42E3-B16A-80644867A91E</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -44,7 +44,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>8A9FA6C9-297B-40B3-AD40-8A0B697C912F.xcactivitylog</string>
+			<string>5C0906FE-5ACB-42E3-B16A-80644867A91E.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>E</string>
 			<key>schemeIdentifier-containerName</key>
@@ -56,13 +56,13 @@
 			<key>signature</key>
 			<string>Building workspace Otto with scheme Otto and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>570908754.89408302</real>
+			<real>571409756.97322798</real>
 			<key>timeStoppedRecording</key>
-			<real>570908757.86369896</real>
+			<real>571409761.10416198</real>
 			<key>title</key>
 			<string>Building workspace Otto with scheme Otto and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>8A9FA6C9-297B-40B3-AD40-8A0B697C912F</string>
+			<string>5C0906FE-5ACB-42E3-B16A-80644867A91E</string>
 		</dict>
 	</dict>
 </dict>

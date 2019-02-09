@@ -2,11 +2,36 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import MapView from 'react-native-maps';
 import { Marker } from 'react-native-maps';
+import { OpenMapDirections } from 'react-native-navigation-directions';
 
 import { colorOtto, colorTalletus } from '../constants';
 
 class DetailsScreen extends React.Component {
 
+    state = {
+        latitude: null,
+        longitude: null,
+        error: null
+    };
+
+    _callShowDirections = (end) => {
+
+        const startPoint = {
+            longitude: this.state.longitude,
+            latitude: this.state.latitude
+        }
+
+        // const endPoint = {
+        //     longitude: -8.9454275,
+        //     latitude: 38.5722429
+        // }
+
+        const transportPlan = 'w';
+
+        OpenMapDirections(startPoint, end, transportPlan).then(res => {
+            console.log(res)
+        });
+    }
 
     static navigationOptions = ({ navigation }) => {
         return {
@@ -22,13 +47,33 @@ class DetailsScreen extends React.Component {
         };
     };
 
-
+    componentDidMount() {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            this.setState({
+              latitude: Number(position.coords.latitude),
+              longitude: Number(position.coords.longitude),
+              error: null, 
+            });
+          },
+          (error) => {
+            this.setState({ error: error.message });
+          },
+          { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
+        );
+      }
+    
     render() {
 
         const { navigation } = this.props;
         const item = navigation.getParam('item', null);
         const lat = Number(item.lat);
         const lon = Number(item.lon);
+
+        const endPoint = {
+            longitude: lon,
+            latitude: lat
+        }
 
         return (
             <View style={styles.page}>
@@ -49,7 +94,7 @@ class DetailsScreen extends React.Component {
                         description={item.city}
                     />
                 </MapView>
-                <TouchableOpacity style={styles.description}>
+                <TouchableOpacity style={styles.description} onPress={() => { this._callShowDirections(endPoint) }}>
                     <View style={styles.descriptionRow}>
                         <View style={styles.column1}>
                             <Text style={styles.text}>

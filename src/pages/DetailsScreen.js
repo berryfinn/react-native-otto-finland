@@ -4,7 +4,7 @@ import MapView from 'react-native-maps';
 import { Marker } from 'react-native-maps';
 import { OpenMapDirections } from 'react-native-navigation-directions';
 
-import { colorOtto, colorTalletus } from '../constants';
+import { colorOtto, colorTalletus, searchRoute } from '../constants';
 
 class DetailsScreen extends React.Component {
 
@@ -49,20 +49,20 @@ class DetailsScreen extends React.Component {
 
     componentDidMount() {
         navigator.geolocation.getCurrentPosition(
-          (position) => {
-            this.setState({
-              latitude: Number(position.coords.latitude),
-              longitude: Number(position.coords.longitude),
-              error: null, 
-            });
-          },
-          (error) => {
-            this.setState({ error: error.message });
-          },
-          { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
+            (position) => {
+                this.setState({
+                    latitude: Number(position.coords.latitude),
+                    longitude: Number(position.coords.longitude),
+                    error: null,
+                });
+            },
+            (error) => {
+                this.setState({ error: error.message });
+            },
+            { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
         );
-      }
-    
+    }
+
     render() {
 
         const { navigation } = this.props;
@@ -94,7 +94,7 @@ class DetailsScreen extends React.Component {
                         description={item.city}
                     />
                 </MapView>
-                <TouchableOpacity style={styles.description} onPress={() => { this._callShowDirections(endPoint) }}>
+                <View style={styles.description}>
                     <View style={styles.descriptionRow}>
                         <View style={styles.column1}>
                             <Text style={styles.text}>
@@ -108,11 +108,12 @@ class DetailsScreen extends React.Component {
                             </Text>
                         </View>
                         <View style={styles.column2}>
-                            <Text style={styles.button}>Ottaa</Text>
-                            <Text style={styles.button}>Reitti</Text>
+                            <TouchableOpacity style={styles.button}  onPress={() => { this._callShowDirections(endPoint) }}>
+                                <Text style={styles.buttonText}>{searchRoute}</Text>
+                            </TouchableOpacity>
                         </View>
                     </View>
-                </TouchableOpacity>
+                </View>
             </View>
         );
     }
@@ -158,11 +159,19 @@ const styles = StyleSheet.create({
         fontSize: 12,
         textTransform: 'capitalize'
     },
-    button: {
+    buttonText: {
         color: 'whitesmoke',
-        fontSize: 24,
+        padding: 10,
+        fontSize: 22,
         textTransform: 'capitalize'
-    }
+    },
+    button: {
+        //paddingTop:4,
+        //paddingBottom:4,
+        backgroundColor:colorOtto,
+        borderRadius:8,
+        borderWidth: 1,
+        borderColor: colorOtto    }
 })
 
 function sType(type) {
